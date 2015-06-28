@@ -1,53 +1,47 @@
 package com.example.pawan.progressbar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
-	TextView tv;
-	ProgressBar pBar;
-	int pStatus = 0;
-	private Handler handler = new Handler();
+public class MainActivity extends Activity implements View.OnClickListener{
 
+    Button progressBar1,progressBar2,progressBar3,progressBar4;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		tv = (TextView) findViewById(R.id.textView1);
-		pBar = (ProgressBar) findViewById(R.id.progressBar1);
+        setContentView(R.layout.activity_main);
 
-		new Thread(new Runnable() {
+        progressBar1=(Button)findViewById(R.id.btnProgressBar1);
+        progressBar2=(Button)findViewById(R.id.btnProgressBar2);
+        progressBar3=(Button)findViewById(R.id.btnProgressBar3);
+        progressBar4=(Button)findViewById(R.id.btnProgressBar4);
 
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				while (pStatus <= 100) {
+        progressBar1.setOnClickListener(this);
+        progressBar2.setOnClickListener(this);
+        progressBar3.setOnClickListener(this);
+        progressBar4.setOnClickListener(this);
 
-					handler.post(new Runnable() {
-
-						@Override
-						public void run() {
-							// TODO Auto-generated method stub
-							pBar.setProgress(pStatus);
-							pBar.setSecondaryProgress(pStatus + 5);
-							//tv.setText(pStatus + "/" + pBar.getMax());
-						}
-					});
-					try {
-						// Sleep for 200 milliseconds.
-						// Just to display the progress slowly
-						Thread.sleep(200);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-					pStatus++;
-				}
-			}
-		}).start();
 	}
+
+    @Override
+    public void onClick(View view) {
+        Intent intent;
+        if (view==progressBar1){
+            intent=new Intent(getApplicationContext(),ProgressBarActivity1.class);
+            startActivity(intent);
+        }else if (view==progressBar2){
+
+        }else if (view==progressBar3){
+
+        }else if (view==progressBar4){
+
+        }
+
+    }
 }
