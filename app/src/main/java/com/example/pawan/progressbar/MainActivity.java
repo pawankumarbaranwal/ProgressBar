@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
-    Button progressBar1,progressBar2,progressBar3,progressBar4;
+    Button progressBar1,progressBar2,progressBar3,progressBar4,splashActivityProgressBar;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,11 +21,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         progressBar2=(Button)findViewById(R.id.btnProgressBar2);
         progressBar3=(Button)findViewById(R.id.btnProgressBar3);
         progressBar4=(Button)findViewById(R.id.btnProgressBar4);
+        splashActivityProgressBar=(Button)findViewById(R.id.btnSplashActivityProgressBar);
 
         progressBar1.setOnClickListener(this);
         progressBar2.setOnClickListener(this);
         progressBar3.setOnClickListener(this);
         progressBar4.setOnClickListener(this);
+        splashActivityProgressBar.setOnClickListener(this);
 
 	}
 
@@ -41,9 +43,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }else if (view==progressBar3){
             intent=new Intent(getApplicationContext(),ProgressBarActivity3.class);
             startActivity(intent);
-        }else if (view==progressBar4){
-
+        }else if (view==splashActivityProgressBar){
+            intent=new Intent(getApplicationContext(),ProgressBarWithSplashActivity.class);
+            startActivity(intent);
         }
-
     }
 }

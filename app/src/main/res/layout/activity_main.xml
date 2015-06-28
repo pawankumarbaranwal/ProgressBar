@@ -29,4 +29,11 @@
         android:layout_height="wrap_content"
         android:text="Progress Bar4"/>
 
+    <Button
+        android:id="@+id/btnSplashActivityProgressBar"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="SplashActivityProgressBar"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
