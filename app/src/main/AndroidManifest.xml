@@ -25,6 +25,11 @@
         <activity
             android:name=".ProgressBarActivity1"
             android:label="@string/app_name"></activity>
-
+        <activity
+            android:name=".ProgressBarActivity2"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ProgressBarActivity3"
+            android:label="@string/app_name"></activity>
     </application>
 </manifest>

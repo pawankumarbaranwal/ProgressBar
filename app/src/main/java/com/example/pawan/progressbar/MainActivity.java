@@ -36,9 +36,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
             intent=new Intent(getApplicationContext(),ProgressBarActivity1.class);
             startActivity(intent);
         }else if (view==progressBar2){
-
+            intent=new Intent(getApplicationContext(),ProgressBarActivity2.class);
+            startActivity(intent);
         }else if (view==progressBar3){
-
+            intent=new Intent(getApplicationContext(),ProgressBarActivity3.class);
+            startActivity(intent);
         }else if (view==progressBar4){
 
         }
