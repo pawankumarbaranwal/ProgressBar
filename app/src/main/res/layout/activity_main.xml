@@ -24,10 +24,10 @@
         android:text="Progress Bar3"/>
 
     <Button
-        android:id="@+id/btnProgressBar4"
+        android:id="@+id/btnProgressBar2Sec"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Progress Bar4"/>
+        android:text="Progress Bar For 2 sec"/>
 
     <Button
         android:id="@+id/btnSplashActivityProgressBar"

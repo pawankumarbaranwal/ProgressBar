@@ -36,6 +36,9 @@
         <activity
             android:name=".ProgressBarWithSplashActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ProgressBarFor2Sec"
+            android:label="@string/app_name"></activity>
 
     </application>
 </manifest>
